@@ -1,0 +1,9 @@
+version: "3.1"
+services:
+    message_broker:
+        image: eclipse-mosquitto
+        restart: always
+        volumes:
+            - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
+        ports:
+            - "1883:1883"
